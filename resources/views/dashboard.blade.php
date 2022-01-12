@@ -12,7 +12,7 @@
                 <div class="flex-auto text-2xl mb-4">Tasks Lists</div>
                 
                 <div class="flex-auto text-right mt-2">
-                    <a href="/task" class="bg-blue-500 hover:bg-blue-700 text font-bold py-2 px-4 rounded">Add new Task</a>
+                    <a href="/task" class="bg-blue-500 hover:bg-blue-700 text font-bold py-2 px-4 rounded">Add new Tasks</a>
                 </div>
             </div>
             <table class="w-full text-md rounded mb-4">
