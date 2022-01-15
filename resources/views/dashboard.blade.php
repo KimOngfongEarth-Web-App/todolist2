@@ -7,19 +7,28 @@
 <style>
             body {
                 font-family: 'Nunito', sans-serif;
+                background-color: lightblue;
             }
         </style>
-<div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class=" overflow-hidden shadow-xl sm:rounded-lg p-5 bg-warning bg-opacity-50">
-            <div class="flex">
-                <div class="flex-auto text-2xl mb-4 text-dark fw-bolder" >Tasks Lists</div>
-                
-                <div class="flex-auto text-right mt-2 ">
-                    <a href="/task" class="bg-blue-500 hover:bg-blue-700 text font-bold py-2 px-4 rounded btn btn-success btn-sm" role="button">Add new Tasks</a> 
-                </div>
+
+
+<div class="py-12" >
+
+    <div class="max-w-5xl mx-auto sm:px-6 lg:px-8" >
+        
+        <div class=" overflow-hidden shadow-xl sm:rounded-lg p-5 bg-yellow-ja bg-opacity-50" >
+
+            <nav class="navbar navbar-light">
+            <div class="container-fluid">
+            <a class="navbar-brand"><h3><strong>Tasks Lists</strong></h3></a>
+            
+      
+            <a href="/task" class="btn btn-success" role="button">Add new Task</a>
+            
             </div>
-            <table class="w-full text-md rounded mb-4 table table-hover p-3 mb-2 bg-light text-dark bg-opacity-25">
+            </nav>
+
+            <!-- <table class="w-full text-md rounded mb-4 table table-hover p-3 mb-2 bg-light text-dark bg-opacity-25">
                 <thead>
                 <tr class="border-b">
                     <th class="text-left p-3 px-5">Task</th>
@@ -35,18 +44,52 @@
                         </td>
                         <td class="p-3 px-5 ">
                             
-                            <a href="/task/{{$task->id}}" name="edit" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text py-1 px-2 rounded focus:outline-none focus:shadow-outline btn btn-outline-secondary">Edit</a>
+                            <a href="/task/{{$task->id}}" name="edit" class="btn btn-outline-secondary btn-sm">Edit</a>
                             <form action="/task/{{$task->id}}" class="inline-block">
-                                <button type="submit" name="delete" formmethod="POST" class="text-sm bg-red-500 hover:bg-red-700 text py-1 px-2 rounded focus:outline-none focus:shadow-outline btn btn-outline-danger">Delete</button>
+                                <button type="submit" name="delete" formmethod="POST" class="btn btn-outline-danger btn-sm">Delete</button>
                                 {{ csrf_field() }}
                             </form>
                         </td>
                     </tr>
                 @endforeach
                 </tbody>
-            </table>
+            </table> -->
+
+            @foreach(auth()->user()->tasks as $task)
+            <div class="card border-warning max-w-5xl mx-auto mtb-5" >
             
+            <div class="card-content">
+
+            <div class="card-body">
+
+            <div class="text-left"> 
+            {{$task->description}}
+            <a href="/task/{{$task->id}}" name="edit" style="color:grey;">-</a>
+            </div>
+
+            
+            
+            <div class="text-right"> 
+            <form action="/task/{{$task->id}}" class="inline-block">
+            <button type="submit" name="delete" formmethod="POST" class="btn btn-outline-success btn-sm">Complete</button>
+            {{ csrf_field() }}
+            </form>
+            </div>
+            
+            
+            
+            </div>
+
+            </div>
+
+
+            </div>
+            @endforeach
+
+
         </div>
     </div>
+    
+
 </div>
 </x-app-layout>

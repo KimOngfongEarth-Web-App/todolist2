@@ -23,13 +23,14 @@
                 /* background-image: url("to-do-list.png"); */
             }
         </style>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     </head>
     <body class="antialiased">
         <div class="relative flex items-top min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/dashboard') }}" >Dashboard</a>
+                        <a href="{{ url('/dashboard') }}" class="btn btn-success" role="button">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="btn btn-outline-secondary" role="button">Log in</a>
                         
@@ -45,17 +46,30 @@
              
             <div style="margin-left:15%;">
               <h1><strong> Easy and Simply <br>organize your tasks </strong></h1>
-              
-              <h5 style="color:grey;">Add, edit and delete any of your tasks.
-               Help you organize your everyday to-do things.</h5>  
-              <a href="{{ route('register') }}" class="btn btn-warning" role="button">Register</a>   
-              
-             
+              <span style="color:grey; font-size: 25px;" id='element'></span>  
+              <div>
+            <a href="{{ route('register') }}" class="btn btn-warning" role="button">Register</a>
+            </div>
+   
             </div>
 
+            
             
 
             
         </div>
+
+        <script>
+
+            var typed = new Typed('#element', {
+            strings: ["Help you organize your everyday to-do things.", "Add, edit and delete any of your tasks.","Easy to use"
+        ,"Go to the moon!"],
+               typeSpeed:40,
+                backSpeed:30,
+                loop:true
+            });
+        </script>
+        <script src="resources/js/typed.js"></script>
+        
     </body>
 </html>
