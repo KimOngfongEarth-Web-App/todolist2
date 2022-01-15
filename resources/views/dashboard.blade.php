@@ -20,7 +20,7 @@
 
             <nav class="navbar navbar-light">
             <div class="container-fluid">
-            <a class="navbar-brand"><h3><strong>Tasks Lists</strong></h3></a>
+            <a class="navbar-brand"><h3><strong>{{ Auth::user()->name }}'s Tasks</strong></h3></a>
             
       
             <a href="/task" class="btn btn-success" role="button">Add new Task</a>
