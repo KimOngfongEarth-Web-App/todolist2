@@ -94,8 +94,8 @@
 
 
         </div>
-        <div class="fb-share-button" data-href="http://127.0.0.1:8000/dashboard" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fdashboard&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="fb-share-button" data-href="http://127.0.0.1:8000/dashboard" data-layout="button" data-size="small">  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fdashboard&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"> Share </a>&nbsp;&nbsp; </div>
+        <div><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
     </div>
     
 
