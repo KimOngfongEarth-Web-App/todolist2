@@ -10,7 +10,7 @@
                 background-color: lightblue;
             }
         </style>
-
+        
 
 <div class="py-12" >
 
@@ -26,6 +26,9 @@
             <a href="/task" class="btn btn-success" role="button">Add new Task</a>
             
             </div>
+            <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v13.0" nonce="OQi3mqR2"></script>
+                    
             </nav>
 
             <!-- <table class="w-full text-md rounded mb-4 table table-hover p-3 mb-2 bg-light text-dark bg-opacity-25">
@@ -74,6 +77,9 @@
             <button type="submit" name="delete" formmethod="POST" class="btn btn-outline-success btn-sm">Complete</button>
             {{ csrf_field() }}
             </form>
+
+
+            
             </div>
             
             
@@ -88,6 +94,8 @@
 
 
         </div>
+        <div class="fb-share-button" data-href="http://127.0.0.1:8000/dashboard" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fdashboard&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
