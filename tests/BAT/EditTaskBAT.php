@@ -5,14 +5,14 @@ class EditTaskBAT  {
 
 
     //tests ปุ่ม edit ว่าสามารถ edit ขึ้นไปได้หรือไม่
-    public function testBottonEditTask()
+    public function test_botton_edit_task()
     {
         $this-->assertTrue(true);
     }
 
 
     //user ใส่ตัวอักษรเกิน 30 ตัว
-    public function testUserEditMoreThen30Character()
+    public function test_user_edit_more_then_30_character()
     {
         $this-->assertTrue(true);
     }
