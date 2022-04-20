@@ -2,7 +2,8 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+
+use Tests\TestCase;
 use App\Models\Task;
 
 class TaskUnitTest extends TestCase
@@ -31,12 +32,28 @@ class TaskUnitTest extends TestCase
 
     public function test_description_isempty()
     {
-        $this->assertTrue(true);
+        $task = new Task([
+            'description' => '',
+            'user_id' => 2
+        ]);
+
+        $this->assertEmpty($task->description);
     }
 
     public function test_description_integer()
     {
-        $this->assertTrue(true);
+        $task = new Task([
+            'description' => 123,
+            'user_id' => 1
+        ]);
+
+        try {
+            // some code that is supposed to throw ExceptionOne
+            $this->assertFalse(false, "Test failed");
+        } catch (Exception $e) {
+            $this->assertType('ExceptionOne', $e);
+            $this->assertType('MainException', $e);
+        }
     }
 
     public function test_description_large_string()
