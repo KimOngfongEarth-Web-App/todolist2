@@ -18,6 +18,14 @@ class TaskSeeder extends Seeder
      */
     public function run()
     {
+        // User::create([
+        //     'id' => 1,
+        //     'name' => 'one',
+        //     'email' => 'one@gmail.com',
+        //     'password' => 'password'
+            
+        // ]);
+
         DB::table('tasks')->insert([
             'description' => Str::random(10),
             'user_id' => 'kim@gmail.com',
