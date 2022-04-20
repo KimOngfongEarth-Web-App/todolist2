@@ -5,7 +5,7 @@ class AddTaskBAT  {
 
 
     //user ไม่ได้ใส่ Data ลงไปและกด Add
-    public function testUserNotAdd()
+    public function test_User_Not_Add()
     {
         $this-->assertTrue(true);
     }
